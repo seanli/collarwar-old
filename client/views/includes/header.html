@@ -4,7 +4,7 @@
     <div class="right menu">
       {{#if currentUser }}
         <div class="ui dropdown pointing item">
-          {{ currentUser.emails.0.address }} <i class="dropdown icon"></i>
+          {{ currentUser.profile.firstName }} <i class="dropdown icon"></i>
           <div class="menu">
             <a id="link-logout" class="item">Logout</a>
           </div>
