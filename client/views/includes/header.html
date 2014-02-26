@@ -1,0 +1,18 @@
+<template name="header">
+  <div class="secondary pointing ui menu">
+    <div class="header item"><a href="{{pathFor 'landing'}}">Collar War</a></div>
+    <div class="right menu">
+      {{#if currentUser }}
+        <div class="ui dropdown pointing item">
+          {{ currentUser.emails.0.address }} <i class="dropdown icon"></i>
+          <div class="menu">
+            <a id="link-logout" class="item">Logout</a>
+          </div>
+        </div>
+      {{else}}
+        <a href="{{pathFor 'signup'}}" class="item {{activeRouteClass 'signup'}}">Sign Up</a>
+        <a href="{{pathFor 'login'}}" class="item {{activeRouteClass 'login'}}">Login</a>
+      {{/if}}
+    </div>
+  </div>
+</template>

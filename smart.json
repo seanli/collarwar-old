@@ -1,3 +1,7 @@
 {
-  "packages": {}
+  "packages": {
+    "semantic-ui-less": {},
+    "iron-router": {},
+    "npm": {}
+  }
 }
