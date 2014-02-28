@@ -2,7 +2,7 @@
   {{> header}}
   {{#if currentUser }}
     {{#each currentUser.profile.friends }}
-      <img src="http://graph.facebook.com/{{ uid }}/picture?type=square">
+      <img src="http://graph.facebook.com/{{ uid }}/picture?width=100&amp;height=100">
     {{/each}}
   {{else}}
   <div id="btn-facebook" class="ui facebook button">
