@@ -6,8 +6,10 @@ Accounts.onCreateUser(function (options, user) {
     options.profile.lastName = user.services.facebook.last_name;
     options.profile.username = user.services.facebook.username;
     options.profile.gender = user.services.facebook.gender;
-    options.profile.price = 100
-    options.profile.bank = 1000
+    options.profile.price = 100;
+    options.profile.bank = 1000;
+    options.profile.boss = null;
+    options.profile.workers = [];
     user.profile = options.profile;
   }
   return user;

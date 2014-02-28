@@ -22,11 +22,12 @@ Facebook.prototype.query = function (query, method) {
 }
 
 Facebook.prototype.getUserData = function () {
-  return this.query('me');
+  return this.query('me')['data'];
 }
 
 Facebook.prototype.getUserFriendsData = function () {
-  return this.query('me/friends');
+  var query = 'SELECT uid, first_name, last_name, mutual_friend_count FROM user WHERE uid in (SELECT uid2 FROM friend WHERE uid1=me()) ORDER BY mutual_friend_count DESC';
+  return this.query(query, 'fql')['data'];
 }
 
 Meteor.methods({

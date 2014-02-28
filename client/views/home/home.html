@@ -1,0 +1,12 @@
+<template name="home">
+  {{> header}}
+  {{#if currentUser }}
+    {{#each currentUser.profile.friends }}
+      <img src="http://graph.facebook.com/{{ uid }}/picture?type=square">
+    {{/each}}
+  {{else}}
+  <div id="btn-facebook" class="ui facebook button">
+    <i class="facebook icon"></i> Facebook
+  </div>
+  {{/if}}
+</template>
