@@ -4,8 +4,8 @@ function Facebook (accessToken) {
   this.fb.setAccessToken(this.accessToken);
   this.options = {
     timeout: 3000,
-    pool: {maxSockets: Infinity},
-    headers: {connection: "keep-alive"}
+    pool: { maxSockets: Infinity },
+    headers: { connection: 'keep-alive' }
   }
   this.fb.setOptions(this.options);
 }

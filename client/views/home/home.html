@@ -1,12 +1,27 @@
 <template name="home">
   {{> header}}
   {{#if currentUser }}
-    {{#each currentUser.profile.friends }}
-      <img src="http://graph.facebook.com/{{ uid }}/picture?width=100&amp;height=100">
-    {{/each}}
+    <div id="friend-list" class="ui items" style="margin: 0 auto;">
+      {{#each currentUser.profile.friends }}
+        <div class="item" style="width: 200px; min-height: 300px; float: left;">
+          <div class="image">
+            <img src="http://graph.facebook.com/{{ uid }}/picture?width=200&amp;height=200">
+          </div>
+          <div class="content" style="text-align: center;">
+            <div class="name">{{ first_name }} {{ last_name }}</div>
+            <p class="description">
+              <div style="margin-top: 0.6em; margin-bottom: 0.6em;">$100</div>
+              <a class="ui green button">
+                Hire
+              </a>
+            </p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
   {{else}}
-  <div id="btn-facebook" class="ui facebook button">
-    <i class="facebook icon"></i> Facebook
-  </div>
+    <div id="btn-facebook" class="ui facebook button">
+      <i class="facebook icon"></i> Facebook
+    </div>
   {{/if}}
 </template>

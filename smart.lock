@@ -4,13 +4,14 @@
     "basePackages": {
       "semantic-ui-less": {},
       "iron-router": {},
-      "npm": {}
+      "npm": {},
+      "jquery-masonry": {}
     },
     "packages": {
       "semantic-ui-less": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui-less.git",
-        "tag": "v0.13.0",
-        "commit": "12fc31a076e2b72724ac7f35514cd9cb88e5855c"
+        "tag": "v0.13.1",
+        "commit": "a628138cb0648e15e8004d9e2e540a451f5d0ca3"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
@@ -21,6 +22,11 @@
         "git": "https://github.com/arunoda/meteor-npm.git",
         "tag": "v0.2.6",
         "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "jquery-masonry": {
+        "git": "https://github.com/waltyuyu/meteor-jquery-masonry.git",
+        "tag": "v0.1.0",
+        "commit": "ec514fa4440f3cd77f5f567f25be27dc38ab57fa"
       }
     }
   }

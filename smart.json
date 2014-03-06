@@ -2,6 +2,7 @@
   "packages": {
     "semantic-ui-less": {},
     "iron-router": {},
-    "npm": {}
+    "npm": {},
+    "jquery-masonry": {}
   }
 }
